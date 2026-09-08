@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="header-info">
+                <span class="hotel-icon">🏨</span>
+                <div>
+                    <h1>Grand Hotel</h1>
+                    <span class="status">
+                        <span class="status-dot"></span>
+                        Online
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="messages" id="messages">
+            <!-- Welcome message from bot -->
+            <div class="message bot-message">
+                <span class="avatar">🤖</span>
+                <div class="message-bubble">
+                    Hello! 👋 Welcome to Grand Hotel. I can help you with room bookings, availability, pricing, and more. How can I assist you today?
+                </div>
+            </div>
+
+            <!-- Initial quick replies -->
+            <div class="quick-replies" id="initialQuickReplies">
+                <button class="quick-reply-btn" onclick="sendMessage('Book a Room')">🛏️ Book a Room</button>
+                <button class="quick-reply-btn" onclick="sendMessage('Room Types')">🏠 Room Types</button>
+                <button class="quick-reply-btn" onclick="sendMessage('Check Availability')">🔍 Check Availability</button>
+                <button class="quick-reply-btn" onclick="sendMessage('Amenities')">🌟 Amenities</button>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Type your message..."
+                autocomplete="off"
+            >
+            <button id="sendBtn" onclick="sendMessage()">
+                <span>➤</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="/static/chat.js"></script>
+</body>
+</html>
